@@ -1,19 +1,18 @@
 import { Box, Button, Checkbox, colors, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import React, { useState } from "react";
-import { useCallback } from "react";
 import { useNavigate } from "react-router";
 import CustomInput from "./CustomInput";
-import { BrowserRouter, Link, Route } from "react-router-dom";
-import { login } from "../hooks/UseLogin";
+import { Link } from "react-router-dom";
+import UseLogin from "../hooks/UseLogin";
 
 const SigninPage = () => {
-const [email, setEmail] = useState("");
-const [password, setPassword] = useState("");
-  function handleSubmit(){
-    
-    login(email,password);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { login } = UseLogin();
 
+  async function handleSubmit() {
+    await login(email, password);
   }
   //    const navigate = useNavigate();
   //    console.log(navigate);
@@ -111,16 +110,15 @@ const [password, setPassword] = useState("");
           <CustomInput
             label="Login"
             placeholder="Enter your login..."
-            email = {email}
-            setEmail = {setEmail}
+            email={email}
+            setEmail={setEmail}
             isIconActive={false}
-            
           />
           <CustomInput
             label="Password"
             placeholder="Enter your password..."
-            password = {password}
-            setPassword = {setPassword}
+            password={password}
+            setPassword={setPassword}
             isIconActive={true}
           />
           {/* <CustomInput
