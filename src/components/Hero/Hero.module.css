@@ -1,0 +1,141 @@
+.container{
+    padding: 0rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr ;
+}
+
+.wrapper{
+    display:flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative
+}
+
+.wrapper>img{
+    width: 40rem;
+    position: absolute;
+    bottom: 0;
+    margin-top: 20%;
+    margin-left: 8%;
+}
+
+.blueCircle{
+    width: 40rem;
+    height: 32rem;
+    border-radius: 50%;
+    z-index: -99;
+    position: absolute;
+    bottom: 100;
+    opacity: 90%;
+    margin-top: -10px;
+    margin-left: 8%;
+    background-color: #470031;
+}
+
+.cart2{
+    position: absolute;
+    bottom: 25%;
+    left: 75%;
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+
+}
+
+.cart2>svg{
+    width: 40px;
+    height: 20px;
+    background-color: #FEE0C0;
+    padding: 10px;
+    margin-left: 10%;
+    border-radius: 50%;
+    border: 7px solid var(--black);
+    
+}
+
+.signup{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color:#FEE0C0 ;
+    padding: 5px;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    box-shadow: #470031;
+}
+
+.signup>:first-child{
+    display: block;
+    width: 6rem;
+
+}
+
+.signup>:nth-child(2){
+    border-radius: 50%;
+    border: 1px solid rgb(61, 16, 46);
+    display: flex;
+    width: 10px;
+    height: 10px;
+    padding: 10px;
+    align-items: center;
+}
+
+.h_sides{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.text1{
+   text-transform: uppercase;
+   font-size: 2rem; 
+   width: min-content;
+   display: block;
+   font-weight: 600;
+   margin: 20%;
+}
+
+.text2{
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    color: black;
+    margin: 1%;
+    padding-left: 20%;
+}
+
+.text2>:first-child{
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+.text2>:nth-child(2){
+    display: block;
+}
+
+.traffic{
+    display:flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 20%;
+    margin-top: 30%;
+}
+
+.traffic > :first-child{
+    font-weight: 800;
+    font-size: 3rem;
+
+}
+
+.customers{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 20%;
+    margin-top: 30%;
+}
+
+.customers >  :first-child{
+    font-weight: 800;
+    font-size: 3rem;
+
+}
