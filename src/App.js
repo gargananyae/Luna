@@ -1,22 +1,24 @@
 import "./App.css";
-import Header from "./components/header/Header";
-import Hero from "./components/Hero/Hero";
-import Slider from "./components/Slider/Slider"
-import Virtual from "./components/Virtual/Virtual";
-import Testimonials from "./components/Testimonials/Testimonials";
-import Footer from "./components/Footer/Footer";
+import Landing from "./pages/Landing";
+import Login from "./pages/Login";
+import {BrowserRouter, Routes, Route } from 'react-router-dom'
+
 
 function App() {
   return (
     <div className="App">
-     <Header/>
-     <Hero/> 
-     <Slider/>
-     <Virtual/>
-     <Testimonials/>
-     <Footer/>
+      <BrowserRouter>
+        <Routes>
+          <Route path = "/" element={<Landing/>} ></Route>
+          <Route path = "/login" element={<Login/>} ></Route>
+
+          
+        </Routes>
+        
+      </BrowserRouter>
     </div>
   );
 }
+
 
 export default App;

@@ -1,6 +1,7 @@
 import React from 'react'
 import css from './Header.module.css'
 import Logo from '../../assets/logo.png'
+import { Link } from 'react-router-dom'
 import {CgShoppingBag} from 'react-icons/cg'
 
 
@@ -19,8 +20,8 @@ const Header = () => {
                     <li>Pain Relief</li>
                     <li>Intimate Hygiene</li>
                     <li>Customisable Kits</li>
-                    <li>Period Tracker</li>
                     <li>FAQs</li>
+                    <li><Link to='/login'>Login</Link></li>
                 </ul>
             </div>
            <input type = "text" className = {css.search} placeholder='Search'/>
