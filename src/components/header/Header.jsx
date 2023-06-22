@@ -20,7 +20,7 @@ const Header = () => {
                     <li>Pain Relief</li>
                     <li>Intimate Hygiene</li>
                     <li>Customisable Kits</li>
-                    <li>FAQs</li>
+                    <li><Link to='/faq'>FAQs</Link></li>
                     <li><Link to='/login'>Login</Link></li>
                 </ul>
             </div>

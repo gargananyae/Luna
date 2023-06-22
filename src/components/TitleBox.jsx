@@ -6,7 +6,8 @@ const TitleBox = () => {
     <Grid xs={0} sm={0} md={6} lg={6} xl={6} minHeight={550}>
       <Box
         sx={{
-          backgroundImage: `linear-gradient(135deg, rgba(0, 255, 60, 0.3) , rgba(0, 157, 255, 0.3))`,
+
+          backgroundImage: 'linear-gradient( 135deg, rgba(107, 50, 90, 0.65) , rgba(71, 0, 49, 1) , rgba(126, 76, 110, 1) , rgba(0, 0, 0, 1))',
           padding: "20px",
           display: {
             xs: "none",
@@ -32,7 +33,7 @@ const TitleBox = () => {
             Join Our <br /> Community
           </Typography>
           <Typography variant="body1" fontWeight="" color="whitesmoke">
-            Create Your High-Level Cloud Network Service!
+            Customize your period from A to Z!
           </Typography>
         </Box>
       </Box>

@@ -6,30 +6,30 @@ import SigninPage from "../components/SigninPage";
 import TitleBox from "../components/TitleBox";
 import MainLayout from "../layouts/MainLayout";
 
-const Login = () => {
-  return (
-    <MainLayout>
-      <Box
-        sx={{
-          width: {
-            sm: "90vw",
-            xs: "90vw",
-            md: "60vw",
-            lg: "60vw",
-            xl: "60vw",
-          },
-        }}
-      >
-        {/* GRID SYSTEM */}
-        <Grid container height="90vh">
-          <SigninPage />
+const Login = () => (
+  <MainLayout>
+    <Box
+      sx={{
+        width: {
+          sm: "90vw",
+          xs: "90vw",
+          md: "60vw",
+          lg: "60vw",
+          xl: "60vw",
+        },
+      }}
+    >
 
-          <TitleBox />
-        </Grid>
-        {/* GRID SYSTEM END */}
-      </Box>
-    </MainLayout>
-  );
-};
+
+      {/* GRID SYSTEM */}
+      <Grid container height="90vh">
+        <SigninPage />
+
+        <TitleBox />
+      </Grid>
+      {/* GRID SYSTEM END */}
+    </Box>
+  </MainLayout>
+);
 
 export default Login;

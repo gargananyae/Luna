@@ -1,12 +1,20 @@
 import { Box, Button, Checkbox, colors, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
-import React from "react";
+import React, { useState } from "react";
 import { useCallback } from "react";
 import { useNavigate } from "react-router";
 import CustomInput from "./CustomInput";
 import { BrowserRouter, Link, Route } from "react-router-dom";
+import { login } from "../hooks/UseLogin";
 
 const SigninPage = () => {
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
+  function handleSubmit(){
+    
+    login(email,password);
+
+  }
   //    const navigate = useNavigate();
   //    console.log(navigate);
 
@@ -34,7 +42,7 @@ const SigninPage = () => {
     >
       <Box
         sx={{
-          backgroundColor: "rgba(0, 24, 57, 0.2)",
+          backgroundColor: "#f8b4b4",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -57,12 +65,12 @@ const SigninPage = () => {
                   mt: "60px",
                   width: "150px",
                   height: "50px",
-                  bgcolor: "primary.main",
+                  bgcolor: "#380027",
                   borderRadius: "12px",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  boxShadow: `0 0 20px ${colors.green[500]}`,
+                  boxShadow: `0 0 20px ${colors.red[500]}`,
                 }}
               >
                 <Typography variant="h6" fontWeight="bold" color="white">
@@ -73,29 +81,29 @@ const SigninPage = () => {
             {/* LOGO END */}
 
             <Typography
-              color="white"
+              color="black"
               fontWeight="bold"
               sx={{ textAlign: "center", marginTop: 4, marginBottom: 0 }}
               mt={7}
               mb={1}
             >
-              Simplifies connecting, augmenting your career
+              Simplifies your period.One step at a time.
             </Typography>
             <Typography
-              color="white"
+              color="black"
               fontWeight="bold"
               sx={{ textAlign: "center", margin: 0 }}
               mt={7}
               mb={3}
             ></Typography>
             <Typography
-              color="white"
+              color="black"
               fontWeight="bold"
               sx={{ textAlign: "center", marginTop: 4 }}
               mt={7}
               mb={3}
             >
-              Sign in to our ConnectU
+              Sign in to Luna
             </Typography>
           </Box>
 
@@ -103,11 +111,16 @@ const SigninPage = () => {
           <CustomInput
             label="Login"
             placeholder="Enter your login..."
+            email = {email}
+            setEmail = {setEmail}
             isIconActive={false}
+            
           />
           <CustomInput
             label="Password"
             placeholder="Enter your password..."
+            password = {password}
+            setPassword = {setPassword}
             isIconActive={true}
           />
           {/* <CustomInput
@@ -123,7 +136,7 @@ const SigninPage = () => {
             justifyContent="space-between"
             mt={2}
             width="100%"
-            color="white"
+            color="black"
           >
             <div style={{ display: "flex" }}>
               <Checkbox disableRipple sx={{ p: 0, pr: 1 }} />
@@ -132,7 +145,7 @@ const SigninPage = () => {
             <a
               href="#yoyo"
               style={{
-                color: colors.green[500],
+                color: colors.pink[800],
                 textDecoration: "none",
               }}
             >
@@ -140,10 +153,10 @@ const SigninPage = () => {
             </a>
           </Box>
           <Button
-            //onClick={gotoQuestion}
+            onClick={handleSubmit}
             variant="contained"
             fullWidth
-            sx={{ mt: 4, boxShadow: `0 0 20px ${colors.green[500]}` }}
+            sx={{ mt: 4, boxShadow: `0 0 20px ${colors.red[500]}` }}
           >
             Login
           </Button>
