@@ -9,10 +9,10 @@ function UseLogin() {
         password: password,
       })
       .then((res) => {
-        console.log(res);
+        console.log(res.data);
       })
       .catch((error) => {
-        alert(error);
+        alert(error.message);
       });
   };
   return { login };
