@@ -1,0 +1,116 @@
+/* periodproducts.css */
+
+/* ... (existing styles) */
+
+
+.container {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, Cards, Footer */
+    gap: 20px;
+    max-width: 1200px; /* Limit the width of the container for a modern look */
+    margin: 0 auto; /* Center the container horizontally */
+    backdrop-filter: blur(10px); /* Frosted glass effect for the container */
+  }
+  
+  .card_container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 columns in the grid */
+    grid-gap: 20px;
+  }
+  
+  .card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    backdrop-filter: blur(5px); /* Glass blur effect */
+    height: 100%; /* Set the height to occupy the full space within the grid cell */
+    position: relative; /* Required for positioning child elements */
+  }
+  
+  .card_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px; /* Adjust this value to control the height of the image container */
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    perspective: 800px; /* Set the perspective for the 3D effect */
+  }
+  
+  .card_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Use 'contain' instead of 'cover' to ensure the whole image is visible */
+    transform-origin: center; /* Set the transformation origin to the center of the image */
+    transform: rotateX(0); /* Initially, set the rotation angle to 0 degrees (no rotation) */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover img {
+    transform: translateY(-5px) scale(1.05); /* Slightly pop the image on hover */
+  }
+  
+  .card_header {
+    padding: 10px;
+  }
+  
+  .price {
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  /* Updated styles for interactive "Add to Cart" button */
+  .btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid rgb(61, 16, 46); /* Updated button border color */
+    color: rgb(61, 16, 46); /* Updated button text color */
+    padding: 8px 16px;
+    border-radius: 24px; /* To create a bubble button effect */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    position: absolute; /* Position the button absolutely within the card */
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+    backdrop-filter: blur(5px); /* Glass frosted background */
+    padding: 12px 24px; /* Adjust padding to give more bubble effect */
+    z-index: 1; /* Raise the button above other card elements */
+  }
+  
+  .btn i {
+    font-size: 16px;
+    margin-right: 5px; /* Add spacing between the bag icon and text */
+    visibility: visible; /* Ensure the icon is visible */
+  }
+  
+  .btn:hover {
+    background-color: rgb(61, 16, 46); /* Updated button background color on hover */
+    color: #fff;
+  }
+  
+  /* Updated styles for product description */
+  .card_description {
+    position: absolute; /* Position the description absolutely within the card */
+    bottom: calc(100% + 10px); /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%); /* Center the description horizontally */
+    padding: 8px 12px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px); /* Glass frosted background */
+    color: #fff; /* Text color */
+    font-size: 14px;
+    line-height: 1.4;
+    display: none; /* Hide the description by default */
+    z-index: 1; /* Raise the description above the button */
+  }
+  
+  .card:hover .card_description {
+    display: block; /* Show the description on hover */
+  }
+  
+.h4{
+    justify-content: center;
+    align-items: center;
+}

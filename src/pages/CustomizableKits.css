@@ -1,0 +1,105 @@
+/* CustomizableKits.css */
+.CustomizableKits {
+  font-family: Arial, sans-serif;
+  background-color: #f7a2a2;
+}
+
+.CustomizableKits-content {
+  background-color: #f7a2a2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(30, 3, 3, 0.1);
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.CustomizableKits-content h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #300b0b;
+}
+
+.CustomizableKits-content form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.CustomizableKits-content .input-container {
+  text-align: left;
+}
+
+.CustomizableKits-content label {
+  font-weight: bold;
+  color: #150404;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.CustomizableKits-content select,
+.CustomizableKits-content input[type="date"],
+.CustomizableKits-content input[type="text"] {
+  width: 100%;
+  padding: 12px; /* Increased padding for better spacing */
+  border: 1px solid #210202;
+  border-radius: 4px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.CustomizableKits-content select:focus,
+.CustomizableKits-content input[type="date"]:focus,
+.CustomizableKits-content input[type="text"]:focus {
+  border-color: #000000;
+}
+
+.CustomizableKits-content .btn-container {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.CustomizableKits-content .btn {
+  cursor: pointer;
+  background-color: #e99f9f;
+  border: none;
+  color: #fff;
+  padding: 14px 28px; /* Increased padding for better touch target */
+  border-radius: 24px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.CustomizableKits-content .btn:hover {
+  background-color: #e7a4a4;
+}
+
+/* Add backdrop filter for the glass effect */
+.CustomizableKits-content {
+  backdrop-filter: blur(60px);
+}
+
+/* Add padding between input fields */
+.CustomizableKits-content .input-container {
+  margin-bottom: 15px;
+}
+
+/* Additional styling for a visually appealing form */
+.CustomizableKits-content {
+  
+  background-size: cover;
+  color: #563131; /* White text on a dark background */
+}
+
+.CustomizableKits-content select,
+.CustomizableKits-content input[type="date"],
+.CustomizableKits-content input[type="text"] {
+  background-color: rgba(42, 6, 6, 0.165); /* Semi-transparent background */
+  color: #2e0606; /* White text on input fields */
+}
+
+.CustomizableKits-content .btn {
+  background-color:#470031; /* Coral color */
+}
